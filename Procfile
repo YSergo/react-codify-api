@@ -1,1 +1,1 @@
-web: gunicorn apialisada11.wsgi:application --log-file -
+web: gunicorn api_project.wsgi:application --log-file -
