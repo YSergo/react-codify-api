@@ -1,0 +1,1 @@
+web: gunicorn apialisada11.wsgi:application --log-file -
