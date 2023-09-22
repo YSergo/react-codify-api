@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import AboutData
+from .models import Services
 
-class AboutDataSerializer(serializers.ModelSerializer):
+class ServicesSerializer(serializers.ModelSerializer):
   class Meta:
-    model = AboutData
+    model = Services
     fields = ['id', 'title', 'description', 'price']
