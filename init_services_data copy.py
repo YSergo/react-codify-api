@@ -1,4 +1,4 @@
-from myapp.models import AboutData
+from myapp.models import Services
 
 data = [
   {
@@ -34,4 +34,4 @@ data = [
 ]
 
 for item in data:
-    AboutData.objects.create(**item)
+    Services.objects.create(**item)
