@@ -31,7 +31,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['apialisada11-721689c1d185.herokuapp.com']
+ALLOWED_HOSTS = ['apialisada11-721689c1d185.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -134,7 +134,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True #change to false when frontend is deployed & uncom:
+# CORS_ALLOWED_ORIGINS = ['https://yourfrontenddomain.com', 'localhost', '127.0.0.1']
 
 django_heroku.settings(locals())
 
