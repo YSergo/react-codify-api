@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True # TODO don't forget to change when going to prod
 
 ALLOWED_HOSTS = ['apialisada11-721689c1d185.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -148,4 +148,4 @@ REST_FRAMEWORK = {
     ]
 }
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
