@@ -1,9 +1,5 @@
 from django.db import models
-#  "id": 1,
-# "title": "Разработка",
-# "description": "Напишем код для сайта или веб-приложения.",
-# "price": 60000,
-# Create your models here.
+
 class Services(models.Model):
   title = models.CharField(max_length=100)
   description = models.TextField()
@@ -18,5 +14,5 @@ class Projects(models.Model):
 class Application(models.Model):
   name = models.CharField(max_length=255)
   phone = models.CharField(max_length=20)
-  email = models.EmailField()
-  request = models.TextField()
+  email = models.EmailField(max_length=100)
+  request = models.TextField(max_length=1000)

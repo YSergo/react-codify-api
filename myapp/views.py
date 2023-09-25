@@ -1,25 +1,27 @@
+import json
 from rest_framework import generics
-from .models import Services, Projects
-from .serializers import ServicesSerializer, ProjectsSerializer
-
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import Application
-import json
+
+from .serializers import ServicesSerializer, ProjectsSerializer
+from .models import Services, Projects, Application
+
 # Create your views here.
 class ServicesListCreate(generics.ListCreateAPIView):
   queryset = Services.objects.all()
   serializer_class = ServicesSerializer
 
 class ProjectsListCreate(generics.ListCreateAPIView):
-    queryset = Projects.objects.all()
-    serializer_class = ProjectsSerializer
+  queryset = Projects.objects.all()
+  serializer_class = ProjectsSerializer
 
 @csrf_exempt
 def send_application(request):
   if request.method == 'POST':
+    
     # Парсинг JSON тела запроса
     data = json.loads(request.body.decode('utf-8'))
+
     # Получение данных формы из тела запроса
     name = data.get('name')
     phone = data.get('phone')
