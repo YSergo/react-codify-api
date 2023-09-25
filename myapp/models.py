@@ -1,11 +1,11 @@
 from django.db import models
 
-class Services(models.Model):
+class Service(models.Model):
   title = models.CharField(max_length=100)
   description = models.TextField()
   price = models.IntegerField()
 
-class Projects(models.Model):
+class Project(models.Model):
   title = models.CharField(max_length=100)
   description = models.TextField()
   link = models.URLField(max_length=200, blank=True, null=True)

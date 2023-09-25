@@ -3,17 +3,17 @@ from rest_framework import generics
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
-from .serializers import ServicesSerializer, ProjectsSerializer
-from .models import Services, Projects, Application
+from .serializers import ServiceSerializer, ProjectSerializer
+from .models import Service, Project, Application
 
 # Create your views here.
-class ServicesListCreate(generics.ListCreateAPIView):
-  queryset = Services.objects.all()
-  serializer_class = ServicesSerializer
+class ServiceListCreate(generics.ListCreateAPIView):
+  queryset = Service.objects.all()
+  serializer_class = ServiceSerializer
 
-class ProjectsListCreate(generics.ListCreateAPIView):
-  queryset = Projects.objects.all()
-  serializer_class = ProjectsSerializer
+class ProjectListCreate(generics.ListCreateAPIView):
+  queryset = Project.objects.all()
+  serializer_class = ProjectSerializer
 
 @csrf_exempt
 def send_application(request):
