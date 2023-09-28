@@ -8,7 +8,7 @@ class Service(models.Model):
 class Project(models.Model):
   title = models.CharField(max_length=100)
   description = models.TextField()
-  link = models.URLField(max_length=200, blank=True, null=True)
+  image_url = models.CharField(max_length=255, blank=True, null=True)
   url_to_project = models.URLField(max_length=200, blank=True, null=True)
 
 class Application(models.Model):

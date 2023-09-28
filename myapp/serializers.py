@@ -10,4 +10,4 @@ class ServiceSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
   class Meta:
     model = Project
-    fields = ['id', 'title', 'description', 'link', 'url_to_project']
+    fields = ['id', 'title', 'description', 'image_url', 'url_to_project']
