@@ -134,7 +134,12 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = ['https://ysergo.github.io', 'http://192.168.100.183:3000', 'localhost', '127.0.0.1', 'localhost:3000']
+CORS_ALLOWED_ORIGINS = [
+    'https://ysergo.github.io', 
+    'http://192.168.100.183:3000', 
+    'http://localhost:3000', 
+    'http://127.0.0.1:3000'
+]
 
 django_heroku.settings(locals())
 
