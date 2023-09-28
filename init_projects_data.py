@@ -1,4 +1,4 @@
-from myapp.models import Projects
+from myapp.models import Project
 
 data = [
   {
@@ -34,4 +34,4 @@ data = [
 ]
 
 for item in data:
-    Projects.objects.create(**item)
+    Project.objects.create(**item)
